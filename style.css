@@ -34,9 +34,9 @@ h2 {
   font-weight: inherit;
 }
 button {
-  outline: none;
   border: none;
   width: 100%;
+  padding: 0;
   background-color: inherit;
   box-shadow: 0 0 5px #aaa;
   font-family: 'Noto Sans KR', sans-serif;
@@ -95,16 +95,15 @@ header img {
   width: 386px;
 }
 .wrapper {
-  max-width: 800px;
+  max-width: 748px;
   margin: 68px auto 0;
   display: flex;
   gap: 25px;
 }
 .machine-left {
   background-color: white;
-  flex-basis: 340px;
-  flex-shrink: 0;
   padding: 27px;
+  flex: 1;
 }
 .machine-right {
   flex: 1;
@@ -113,10 +112,10 @@ header img {
   border-radius: 10px;
   text-align: center;
   padding: 11px 9px;
-  border: 3px solid transparent;
 }
+
 .item.selected {
-  border: 3px solid #6327fe;
+  box-shadow: inset 0 0 0 3px #6327fe;
 }
 .item.soldout {
   position: relative;
@@ -125,11 +124,11 @@ header img {
 .item.soldout::after {
   content: '품절';
   text-indent: -9999px;
-  width: calc(100% + 6px);
-  height: calc(100% + 6px);
+  width: 100%;
+  height: 100%;
   position: absolute;
-  top: -3px;
-  left: -3px;
+  top: 0;
+  left: 0;
   border-radius: 10px;
   background: rgba(0, 0, 0, 0.8) url(img/품절.png) no-repeat center / 7rem;
 }
